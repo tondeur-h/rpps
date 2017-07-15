@@ -77,21 +77,21 @@ String sql="SELECT * FROM rpps.rpps WHERE Identifiant_PP like '%"+rppstxt+"%' AN
 private String detail(@RequestParam(value="rpps", required=true) String rppstxt,Model model){
     
 String sql="SELECT concat_ws('<br>',Identifiant_PP,Raison_sociale_site) as RF," +
-"concat_ws(' ','Nom:',Libelle_civilite_exercice,Nom_d_exercice,Prenom_d_exercice,'<br>'," +
-"'profession:(',Code_profession,')',Libelle_profession,'<br>'," +
-"'savoir faire:(',Code_savoir_faire,')',Libelle_savoir_faire,'<br>'," +
-"'SIRET:',Numero_SIRET_site,'<br>'," +
-"'SIREN:',Numero_SIREN_site,'<br>'," + 
-"'FINESS:',Numero_FINESS_site,'<br>'," +
-"'FINESS Etb:',Numero_FINESS_etablissement_juridique,'<br>'," +
-"'Raison sociale:',Raison_sociale_site,'<br>',"+
-"'Enseigne:',Enseigne_commerciale_site,'<br>'," +
-"'Structure:(',Identifiant_structure,')', Complement_destinataire, Complement_point_geographique,'<br>'," +
-"'Adresse:',Numero_Voie,Indice_repetition_voie,Code_type_de_voie,Libelle_type_de_voie,Libelle_Voie," +
+"concat_ws(' ','<strong>Nom:</strong>',Libelle_civilite_exercice,Nom_d_exercice,Prenom_d_exercice,'<br>'," +
+"'<strong>profession:</strong>(',Code_profession,')',Libelle_profession,'<br>'," +
+"'<strong>savoir faire:</strong>(',Code_savoir_faire,')',Libelle_savoir_faire,'<br>'," +
+"'<strong>SIRET:</strong>',Numero_SIRET_site,'<br>'," +
+"'<strong>SIREN:</strong>',Numero_SIREN_site,'<br>'," + 
+"'<strong>FINESS:</strong>',Numero_FINESS_site,'<br>'," +
+"'<strong>FINESS Etb</strong>:',Numero_FINESS_etablissement_juridique,'<br>'," +
+"'<strong>Raison sociale:</strong>',Raison_sociale_site,'<br>',"+
+"'<strong>Enseigne:</strong>',Enseigne_commerciale_site,'<br>'," +
+"'<strong>Structure:</strong>(',Identifiant_structure,')', Complement_destinataire, Complement_point_geographique,'<br>'," +
+"'<strong>Adresse:</strong>',Numero_Voie,Indice_repetition_voie,Code_type_de_voie,Libelle_type_de_voie,Libelle_Voie," +
 "Mention_distribution,Bureau_cedex,Code_postal,'(commune=',Code_commune,')', Libelle_commune,Libelle_pays,'<br>'," +
-"'Tel:',Telephone,'/',Telephone_2,'Fax=',Telecopie,'<br>',"+
-"'Email:',Adresse_e_mail,'<br>',"+
-"'MSSante:',Adresse_BAL_MSSante) as Details" +
+"'<strong>Tel:</strong>',Telephone,'/',Telephone_2,'Fax=',Telecopie,'<br>',"+
+"'<strong>Email:</strong>',Adresse_e_mail,'<br>',"+
+"'<strong>MSSante:</strong>',Adresse_BAL_MSSante) as Details" +
 " FROM rpps.rpps WHERE Identifiant_PP='"+rppstxt+"'";
     
     rppsLst.clear();
