@@ -61,6 +61,7 @@ String sql="SELECT * FROM rpps.rpps WHERE Identifiant_PP like '%"+rppstxt+"%' AN
         med.setPrenom_d_exercice(row.get("Prenom_d_exercice").toString());
         med.setRaison_sociale_site(row.get("Raison_sociale_site").toString());
         med.setLibelle_commune(row.get("Libelle_commune").toString());
+        med.setLibelle_profession(row.get("Libelle_profession").toString());
         med.setLibelle_savoir_faire(row.get("Libelle_savoir_faire").toString());
         med.setAdresse_e_mail(row.get("Adresse_e_mail").toString());
         med.setTelephone(row.get("Telephone").toString());

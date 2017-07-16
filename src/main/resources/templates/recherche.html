@@ -32,15 +32,17 @@
       <tr>
         <th>RPPS</th>
         <th>NOM-PRENOM</th>
+        <th>PROFESSION</th>
         <th>SPECIALITE</th>
         <th>SITE</th>
         <th>VILLE</th>
         <th>EMAIL</th>
         <th>TEL</th>
       </tr>
-      <tr th:each="med : ${medecinsLst}">
+      <tr th:each="med : ${medecinsLst}" onmouseover="this.style.cursor='pointer'" th:onclick="'window.location=\'/detail?rpps='+ ${med.Identifiant_PP} + '\''">
         <td><a th:href="@{'/detail?rpps=' + ${med.Identifiant_PP}}"><div th:text="${med.Identifiant_PP}"></div></a></td>
         <td th:text="${med.Nom_d_exercice}+' '+${med.Prenom_d_exercice}"></td>
+        <td th:text="${med.Libelle_profession}"></td>
         <td th:text="${med.Libelle_savoir_faire}"></td>
         <td th:text="${med.Raison_sociale_site}"></td>
         <td th:text="${med.Libelle_commune}"></td>
